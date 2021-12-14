@@ -22,12 +22,9 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    # path('singleproject/', include('home.urls')),
-    # path('project/<str:pk>/', include('home.urls')),
-    # path('project_form/', include('home.urls')),
-    # path('update_project/<str:pk>/',include('home.urls')),
-    # path('delete_project/<str:pk>/',include('home.urls')),
+    path('',include('users.urls')),
+    path('singleproject/', include('home.urls')),
+
 ]
 # urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
