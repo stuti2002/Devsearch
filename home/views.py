@@ -37,8 +37,8 @@ def project(request,pk):
     #         projectobj=i
 
     projectobj=Project.objects.get(id=pk)
-    Tags=projectobj.Tags.all()
-    context={'projectobj':projectobj,'tags':Tags}
+    tags=projectobj.Tags.all()
+    context={'projectobj':projectobj,'tags':tags}
     
     return render(request,'Projects/project.html',context)
     #{'project':projectobj})

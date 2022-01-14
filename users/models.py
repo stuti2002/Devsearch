@@ -14,10 +14,10 @@ class Profile(models.Model):
     short_intro=models.CharField(max_length=50 ,null=True,blank=True)
     profile_image=models.ImageField(blank=True ,null =True , upload_to='profiles/', default="profiles/user-default.png")
     bio=models.TextField(null=True, blank=True)
-    social_website=models.CharField(max_length=20 ,blank=True,null=True)
-    linkedin_profile=models.CharField(max_length=20,blank=True,null=True)
-    github_account=models.CharField(max_length=20,blank=True,null=True)
-    youtube_chanel=models.CharField(max_length=20,blank=True,null=True)
+    social_website=models.CharField(max_length=100 ,blank=True,null=True)
+    linkedin_profile=models.CharField(max_length=100,blank=True,null=True)
+    github_account=models.CharField(max_length=100,blank=True,null=True)
+    youtube_chanel=models.CharField(max_length=100,blank=True,null=True)
     created=models.DateTimeField(auto_now_add=True)
     id=models.UUIDField(default=uuid.uuid4 ,unique=True,primary_key=True, editable=False)
 
@@ -34,3 +34,9 @@ class Skill(models.Model):
 
     def __str__(self):
         return str(self.name)
+
+
+
+
+
+

@@ -82,9 +82,7 @@
                   {{proj.Title}}
                 </h3>
                 <p>
-                  <a class="project__author" href=""/project/{{proj.id}}""
-                    >{{proj.owner}}</a
-                  >
+                  <a class="project__author" href="{% url 'user-profile' proj.owner.id %}">By {{proj.owner.name}}</a>
                 </p>
                 <p class="project--rating">
                   <span style="font-weight: bold"><td>{{proj.vote_total}}%</td></span> Postitive Feedback
